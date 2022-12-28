@@ -16,7 +16,7 @@ const recommendProfiles = `
         }
     }
   }
-`
+`;
 
 const getProfiles = `
   query Profiles($id: ProfileId!) {
@@ -86,7 +86,7 @@ const getProfiles = `
       }
     }
   }
-`
+`;
 
 const getDefaultProfile = `
 query DefaultProfile($address: EthereumAddress!) {
@@ -173,7 +173,7 @@ query DefaultProfile($address: EthereumAddress!) {
   }
 }
 
-`
+`;
 
 const getPublications = `
   query Publications($id: ProfileId!, $limit: LimitScalar) {
@@ -220,7 +220,7 @@ const getPublications = `
     url
     mimeType
   }
-`
+`;
 
 const searchPublications = `query Search($query: Search!, $type: SearchRequestTypes!) {
   search(request: {
@@ -517,7 +517,7 @@ fragment CommentMirrorOfFields on Comment {
     }
   }
 }
-`
+`;
 
 const searchProfiles = `
   query Search($query: Search!, $type: SearchRequestTypes!) {
@@ -578,7 +578,7 @@ const searchProfiles = `
       totalFollowing
     }
   }
-`
+`;
 
 const explorePublications = `
   query {
@@ -732,7 +732,7 @@ const explorePublications = `
     createdAt
     appId
   }
-`
+`;
 
 const getChallenge = `
   query Challenge($address: EthereumAddress!) {
@@ -740,7 +740,7 @@ const getChallenge = `
       text
     }
   }
-`
+`;
 
 const doesFollow = `
   query($request: DoesFollowRequest!) {
@@ -750,7 +750,7 @@ const doesFollow = `
       follows
     }
   }
-`
+`;
 
 const timeline = `
 query Timeline($profileId: ProfileId!, $limit: LimitScalar) {
@@ -1083,13 +1083,13 @@ fragment WalletFields on Wallet {
     ...ProfileFields
    }
 }
-`
+`;
 
 /*
-* const doesFollowRequest = {
-*   followInfos: [{ followerAddress: EthereumAddress!, profileId: ProfileId! }]
-*  }
-*/
+ * const doesFollowRequest = {
+ *   followInfos: [{ followerAddress: EthereumAddress!, profileId: ProfileId! }]
+ *  }
+ */
 
 export {
   recommendProfiles,
@@ -1101,5 +1101,5 @@ export {
   explorePublications,
   doesFollow,
   getChallenge,
-  timeline
-}
+  timeline,
+};
