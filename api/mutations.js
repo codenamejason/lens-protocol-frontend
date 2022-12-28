@@ -1,4 +1,3 @@
-
 const followUser = `
   mutation($request: FollowRequest!) { 
     createFollowTypedData(request: $request) {
@@ -26,7 +25,7 @@ const followUser = `
       }
     }
   }
-`
+`;
 
 const authenticate = `
   mutation Authenticate(
@@ -41,7 +40,7 @@ const authenticate = `
       refreshToken
     }
   }
-`
+`;
 
 const refresh = `
   mutation Refresh(
@@ -54,7 +53,7 @@ const refresh = `
       refreshToken
     }
   }
-`
+`;
 
 const broadcast = `
 	mutation Broadcast($request: BroadcastRequest!) {
@@ -67,11 +66,11 @@ const broadcast = `
 			}
 		}
 	}
-`
+`;
 
 /* UnfollowRequest
  * const unfollowRequestData = { profile: ProfileId! }
-*/
+ */
 
 const createUnfollowTypedData = `
   mutation($request: UnfollowRequest!) { 
@@ -99,7 +98,7 @@ const createUnfollowTypedData = `
       }
     }
  }
-`
+`;
 
 const createProfileMetadataTypedData = `
   mutation CreateSetProfileMetadataTypedData(
@@ -130,7 +129,7 @@ const createProfileMetadataTypedData = `
       }
     }
   }
-`
+`;
 
 const createPostTypedData = `
 mutation createPostTypedData($request: CreatePublicPostRequest!) {
@@ -163,7 +162,7 @@ mutation createPostTypedData($request: CreatePublicPostRequest!) {
     }
   }
 }
-`
+`;
 
 export {
   followUser,
@@ -172,5 +171,5 @@ export {
   createUnfollowTypedData,
   broadcast,
   createProfileMetadataTypedData,
-  createPostTypedData
-}
+  createPostTypedData,
+};
